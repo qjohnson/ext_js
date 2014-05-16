@@ -4,12 +4,34 @@
  * and open the template in the editor.
  */
 
+// Make the JsonP request
+
+/*
+Ext.data.JsonP.request({
+    url: 'http://api.randomuser.me',
+    callbackKey: 'jsonCallBack',
+    callback: function (jsonData) {
+		alert(jsonData);
+    }
+});
+*/
+
+/*
+Ext.Ajax.request({
+    url: 'http://api.randomuser.me/',
+    success: function(response){
+        alert("success");
+    }
+});
+*/
+
+
 function createNetBeansWin() {
     var win  = new Ext.create('Ext.Window', {
         id : 'myWindow',
         title : 'My first ExtJs Window with NetBeans',
-        width : 300,
-        height : 150,
+        width : 600,
+        height : 300,
         layout : 'fit'
     }); 
     win.show();
