@@ -6,25 +6,16 @@
 
 // Make the JsonP request
 
-/*
 Ext.data.JsonP.request({
-    url: 'http://api.randomuser.me',
-    callbackKey: 'jsonCallBack',
-    callback: function (jsonData) {
-		alert(jsonData);
+    url: 'http://whateverorigin.org/get?url=http://api.randomuser.me',
+    callbackKey: 'callback',
+    callback: function (result, data) {
+        var result = JSON.parse(data.contents).results[0].user;
+        alert(result.phone)
     }
 });
-*/
 
-/*
-Ext.Ajax.request({
-    url: 'http://api.randomuser.me/',
-    success: function(response){
-        alert("success");
-    }
-});
-*/
-
+//document.write("<iframe id=\"apiFrame\" sandbox=\"allow-same-origin allow-scripts\" src=\"http://api.randomuser.me/\"></iframe>");
 
 function createNetBeansWin() {
     var win  = new Ext.create('Ext.Window', {
