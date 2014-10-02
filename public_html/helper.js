@@ -196,7 +196,7 @@ helper.displayPersonWindow = function(person) {
                     xtype: 'panel', 
                     width: 200,
                     height: 400,
-                    html: '<img src="' + person.picture.medium + '"style="max-height:100%; max-width:100%;"/>',
+                    html: '<img src="' + person.picture.large + '"style="max-height:100%; max-width:100%;"/>',
                     border: false
                 },
                 {
